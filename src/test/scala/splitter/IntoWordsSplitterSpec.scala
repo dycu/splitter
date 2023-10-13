@@ -1,4 +1,4 @@
-package com.dycu.vigil
+package splitter
 
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
@@ -36,14 +36,23 @@ class IntoWordsSplitterSpec extends AnyWordSpec with Matchers {
       }
     }
 
-    "there is a word with empty spaces" should {
-      "return it with the correct size keeping the spaces" in {
+    "there is a word with empty spaces at the beginning" should {
+      "ignore them" in {
         intoWordsSplitter.countWordLengths("  word    ") shouldEqual List(
-          (" ", 1),
-          (" ", 1),
           ("word", 4)
         )
       }
     }
+
+    "there are multiple spaces between words" should {
+      "return it with the correct size keeping the spaces" in {
+        intoWordsSplitter.countWordLengths("word1  word2") shouldEqual List(
+          ("word1", 5),
+          ("", 0),
+          ("word2", 5)
+        )
+      }
+    }
+
   }
 }

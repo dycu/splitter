@@ -1,8 +1,7 @@
-ThisBuild / organization := "com.example"
 ThisBuild / scalaVersion := "2.13.5"
 
 lazy val root = (project in file(".")).settings(
-  name := "vigil",
+  name := "splitter",
   libraryDependencies ++= Seq(
     // "core" module - IO, IOApp, schedulers
     // This pulls in the kernel and std modules automatically.
@@ -14,6 +13,7 @@ lazy val root = (project in file(".")).settings(
     // better monadic for compiler plugin as suggested by documentation
     "org.scalactic" %% "scalactic" % "3.2.17",
     "org.scalatest" %% "scalatest" % "3.2.17" % "test",
+    "org.typelevel" %% "cats-effect-testing-scalatest" % "1.5.0" % "test",
     compilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
   )
 )

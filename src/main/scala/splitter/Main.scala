@@ -1,7 +1,7 @@
-package com.dycu.vigil
+package splitter
 
 import cats.effect.{IO, IOApp}
-import com.dycu.vigil.Domain.Limit
+import splitter.Domain.Limit
 
 object Main extends IOApp.Simple {
 
@@ -17,7 +17,6 @@ object Main extends IOApp.Simple {
         limit
       )
     }
-    _ <- IO(println(result.size))
     _ <- IO(result.foreach(println))
   } yield ()
 }

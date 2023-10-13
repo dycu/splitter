@@ -1,7 +1,7 @@
-package com.dycu.vigil
+package splitter
 
 import cats.effect.IO
-import com.dycu.vigil.Domain.Errors.NonPositiveLimit
+import splitter.Domain.Errors.NonPositiveLimit
 
 object Domain {
 
