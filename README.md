@@ -1,4 +1,4 @@
-# vigil
+# Splitter
 
 I've decided to implement the solution using recursion. It was easier to think about it in a declarative manner. As the solution is tail recursive, it's stack safe.
 
