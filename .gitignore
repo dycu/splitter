@@ -1,0 +1,11 @@
+.idea
+target
+*.DS_Store
+*.png
+.dockercount
+.env
+.bsp
+
+# Added by "pipeline-builder"
+.docker-*
+*-stack.yaml
